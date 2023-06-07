@@ -1,0 +1,196 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #24b18e;
+  background-color: #2be025a8;
+}
+
+li {
+  float: left;
+  
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #16cc89;
+}
+.parent{
+  margin-left: 30%;
+}
+.img{
+  width: 5%;
+  margin-left: 15%;
+}
+
+.tout{
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.menu{
+min-height: 100px;
+width: 100%;
+}
+.contenu{
+  width: 30%;
+  padding: 50px;
+  border: 1px solid #0ba06e;
+  border-radius: 4px;
+  resize: vertical;
+  margin-left:30%;
+  border-radius: 5px;
+  background-color: #a4dd9fde;
+  position: relative;
+  margin-bottom: 20%;
+  
+}
+.contenu input{
+width: 65%;
+padding: 2%;
+display: flex;
+}
+.vlid{
+  align-items: center;
+  margin-left: 2%;
+  padding: 2%;
+  background-color: #08da08de;
+  color:#000000de;
+}
+.cadre{
+  border: 1px solid #ccc;
+  width: 150%;
+  border: #ccc;
+  box-shadow: 20%;
+}
+.car{
+  text-align: center;
+  padding: -3%;
+}
+.form{
+  width: 70%;
+padding: 2%;
+display: flex;
+margin-left:-1%;
+margin-left: -0%;
+}
+.formP{
+  width: 65%;
+padding: 2%;
+display: flex;
+margin-left:-1%;
+margin-left: -0%;
+}
+@media screen and (max-width: 900px) and (main-width: 500px){
+  ul{
+    width: 90%;
+  }
+  li {
+    float: 0.9em;
+    
+  }
+}
+@media screen and (max-width: 900px) and (main-width: 500px){
+  li a.active{
+    font-family: 0.9em;
+  }
+}
+
+table { 
+	width: 90%; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	margin-left: 5%;
+
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+    background-color: #04AA6D;
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: center; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+}
